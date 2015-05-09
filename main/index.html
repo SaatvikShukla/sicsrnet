@@ -24,18 +24,22 @@
 <body>
 	<nav class="nav">
     	
-    		<img src="./index-contents/images/menu.png" height="29" width="36" style="float: left;padding:4px;padding-right:8px;">
+    		<img class="menu_button" src="./index-contents/images/menu.png" height="29" width="36" >
     
-		<p style="float: left;" href="#" class="logo">Saatvik Shukla</p>
+		<p style="float: left;" href="#" class="logo">&nbsp;&nbsp;Saatvik Shukla</p>
 	</nav>
+	<div id="main"> 
+		asd asd asd asf adThis is the main!! just somethiung has to be put here though
+	</div>
+	<div id="below-main">
+		loren ipsum dolor smut
+	</div>
 
-	<span class="rippler rippler-img rippler-circle-mask rippler-bs-success">
-		<div id="main"> <img src="index-contents/images/footer.jpg"> 
-	</span>
-	asd asd asd asf adThis is the main!! just somethiung has to be put here though</div>
-	<div id="below-main">#below-main</div>
-	  <button class="btn btn-primary rippler rippler-default" href="#">bootstrap button</button>
-
+	<footer>
+		<center>
+			<img src="index-contents/images/footer.jpg"> 
+		</center>
+	</footer>
 
 	<script>
 		// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
@@ -48,8 +52,10 @@
 		    stop = Math.round($(window).scrollTop());
 		    if (stop > mainbottom) {
 		        $('.nav').addClass('past-main');
+		        $('.menu_button').addClass('past-main-menu');
 		    } else {
 		        $('.nav').removeClass('past-main');
+		        $('.menu_button').removeClass('past-main-menu');
 		    }
 
 		});
