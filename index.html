@@ -19,6 +19,12 @@
 
 	<!-- Paper Icon Button-->
 	<link rel="import" href="./index-contents/components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="./index-contents/components/core-icons/core-icons.html">
+	<link rel="import" href="./index-contents/components/paper-fab/paper-fab.html">
+	<link rel="import" href="./index-contents/components/font-roboto/roboto.html">
+
+	<!-- Classie.js -->
+	<script src="./index-contents/js/classie.js"></script> 
 
 	<link rel="stylesheet" type="text/css" href="./index-contents/css/theme.css">
 
@@ -28,11 +34,33 @@
 <body>
 
 	<nav class="nav">
-    	<img class="menu_button" src="./index-contents/images/menu.png" height="32" width="39" >
+    	
+                    <span class="nav-toggler toggle-slide-left rippler rippler-circle-mask rippler-bs-primary"><img class="menu_button" src="./index-contents/images/menu.png" height="32" width="39" > </span>
 		<span class="rippler rippler-img rippler-bs-success"> 	
 			<p style="float: left;" href="#" class="logo">&nbsp;&nbsp;Saatvik Shukla</p>
 		</span>
 	</nav>
+
+	 <nav class="menu slide-menu-left">
+        <ul>
+            <li><span class="close-menu" style="padding:10px;"><paper-fab icon="arrow-forward" title="arrow-forward"></paper-fab></span></li>
+            <li><div class="rippler rippler-default"><a href="#">First Menu</a></li></div>
+            <li><div class="rippler rippler-default"><a href="#">Second Menu</a></li></div>
+            <li><div class="rippler rippler-default"><a href="#">Third Menu</a></li></div>
+            <li><div class="rippler rippler-default"><a href="#">Fourth Menu</a></li></div>
+            <li><div class="rippler rippler-default"><a href="#">Fifth Menu</a></li></div>
+        </ul>
+    </nav><!-- /slide menu left -->
+
+    <div id="wrapper">
+        <div id="main">
+            <div class="container">
+                <div class="buttons">
+                </div><!-- /buttons -->
+            </div>
+        </div><!-- #main -->
+
+    </div><!-- /#wrapper -->
 
 	<div id="main"> 
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat a dolor iaculis aliquam. Sed non velit a augue luctus faucibus. Pellentesque quis nisi mattis, ultrices dui at, pellentesque metus. Praesent non sem nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate gravida dolor, ac vulputate turpis. Phasellus imperdiet tempus maximus. In dolor ipsum, placerat vitae tortor at, tristique consectetur metus. Sed id ante velit. Mauris sed dictum elit. Phasellus lectus risus, suscipit sed scelerisque sit amet, ultricies ut lacus. Vestibulum id tincidunt diam, ut malesuada diam. Aliquam justo orci, suscipit vel arcu sit amet, ultrices tempor felis.
@@ -91,6 +119,43 @@
 		    ,duration        :  400
 		  });
 		});
+	</script>
+	<script>
+		(function( window ){
+
+   		var body = document.body,
+        mask = document.createElement("div"),
+        toggleSlideLeft = document.querySelector( ".toggle-slide-left" ),
+        slideMenuLeft = document.querySelector( ".slide-menu-left" ),
+        activeNav
+    ;
+
+    mask.className = "mask";
+
+    /* slide menu left */
+    toggleSlideLeft.addEventListener( "click", function(){
+        classie.add( body, "sml-open" );
+        document.body.appendChild(mask);
+        activeNav = "sml-open";
+    } );
+
+    /* hide active menu if mask is clicked */
+    mask.addEventListener( "click", function(){
+        classie.remove( body, activeNav );
+        activeNav = "";
+        document.body.removeChild(mask);
+    } );
+
+    /* hide active menu if close menu button is clicked */
+    [].slice.call(document.querySelectorAll(".close-menu")).forEach(function(el,i){
+        el.addEventListener( "click", function(){
+            classie.remove( body, activeNav );
+            activeNav = "";
+            document.body.removeChild(mask);
+        } );
+    });
+
+	})( window );
 	</script>
 
 </body>
