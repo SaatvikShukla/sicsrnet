@@ -1,0 +1,69 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+	
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<!-- If you want to use the buttons on the bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- rippler CSS -->
+	<link rel="stylesheet" href="./index-contents/rippler/dist/css/rippler.min.css">
+
+	<!-- vendor js -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- rippler js -->
+	<script src="./index-contents/rippler/dist/js/jquery.rippler.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./index-contents/css/theme.css">
+</head>
+<body>
+	<nav class="nav">
+    	
+    		<img src="./index-contents/images/menu.png" height="29" width="36" style="float: left;padding:4px;padding-right:8px;">
+    
+		<p style="float: left;" href="#" class="logo">Saatvik Shukla</p>
+	</nav>
+
+	<span class="rippler rippler-img rippler-circle-mask rippler-bs-success">
+		<div id="main"> <img src="index-contents/images/footer.jpg"> 
+	</span>
+	asd asd asd asf adThis is the main!! just somethiung has to be put here though</div>
+	<div id="below-main">#below-main</div>
+	  <button class="btn btn-primary rippler rippler-default" href="#">bootstrap button</button>
+
+
+	<script>
+		// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
+		var mainbottom = $('#main').offset().top + $('#main').height();
+
+		// on scroll, 
+		$(window).on('scroll',function(){
+
+		    // we round here to reduce a little workload
+		    stop = Math.round($(window).scrollTop());
+		    if (stop > mainbottom) {
+		        $('.nav').addClass('past-main');
+		    } else {
+		        $('.nav').removeClass('past-main');
+		    }
+
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+		  $(".rippler").rippler({
+		    effectClass      :  'rippler-effect'
+		    ,effectSize      :  16      // Default size (width & height)
+		    ,addElement      :  'div'   // e.g. 'svg'(feature)
+		    ,duration        :  400
+		  });
+		});
+	</script>
+
+</body>
+</html>
