@@ -48,7 +48,7 @@ body {
 #main {
   padding: 60px;
   padding-top: 100px;
-  height:600px;
+  height:600px auto;
   background-color:#26A69A;
 }
 
