@@ -8,6 +8,10 @@
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+	<!-- bootstrap-material-design -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.css.map">
+	
 	<!-- If you want to use the buttons on the bootstrap -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -27,6 +31,9 @@
 
 	<!-- Classie.js -->
 	<script src="./index-contents/js/classie.js"></script> 
+
+	<!-- Elevator.js -->
+	<script src="./index-contents/js/elevator.js"></script> 
 
 	<link rel="stylesheet" type="text/css" href="./index-contents/css/theme.css">
 	<link rel="stylesheet" type="text/css" href="./index-contents/css/nav-menu.css">
@@ -86,6 +93,7 @@
 
 
 	<footer>
+
 		<ul class="foot">
 			<li>Contact</li>
 			<li>Aboutt</li>
@@ -93,6 +101,12 @@
 			<li>Something else</li>
 			<li>Something other than else</li>
 		</ul>
+		<br><br><br>
+		<div class="elevator-button">
+			<center>
+				<i class="mdi-hardware-keyboard-arrow-up" style="font-size:60px;"></i>
+			</center>
+		</div>
 	</footer>
 
 	<script>
@@ -160,6 +174,18 @@
     });
 
 	})( window );
+	</script>
+	
+	<!-- Elevator.js -->
+	<script>
+	// Elevator script included on the page, already.
+
+	window.onload = function() {
+	  var elevator = new Elevator({
+	    element: document.querySelector('.elevator-button'),
+	    duration: 1000 // milliseconds
+	  });
+	}
 	</script>
 
 </body>

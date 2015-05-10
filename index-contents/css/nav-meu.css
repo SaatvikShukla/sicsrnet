@@ -86,13 +86,12 @@ nav.slide-menu-left li {
     display: block;
     padding: 5px;
     text-align: center;
-    border-bottom: solid 1px #3184a1;
+    border: none;
+    border-bottom: none;
 }
 nav.slide-menu-left li:first-child {
-    border-top: none
 }
 nav.slide-menu-left li:last-child {
-    border-bottom: solid 1px #3184a1;    
 }
 nav.slide-menu-left a {
     display: block;
