@@ -63,7 +63,7 @@ body {
   box-shadow: 0px 20px 92px -5px rgba(0,0,0,0.54);
   padding: 60px;
   padding-top: 100px;
-  height:1000px;
+  height:1000px auto;
   background-color:#eee;
 }
 
@@ -152,24 +152,24 @@ button.close-menu:focus {
 
 nav.slide-menu-left {
     top: 0;
-    width: 300px;
+    width: 200px;
     height: 100%;
 }
 nav.slide-menu-left li {
     display: block;
+    padding: 5px;
     text-align: center;
     border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
 }
 nav.slide-menu-left li:first-child {
     border-top: none
 }
 nav.slide-menu-left li:last-child {
-    border-bottom: none
+    border-bottom: solid 1px #3184a1;    
 }
 nav.slide-menu-left a {
     display: block;
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
 }
 nav.slide-menu-left button.close-menu {
