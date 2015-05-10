@@ -87,11 +87,12 @@ nav.slide-menu-left li {
     padding: 5px;
     text-align: center;
     border: none;
-    border-bottom: none;
 }
 nav.slide-menu-left li:first-child {
+    border: none;
 }
 nav.slide-menu-left li:last-child {
+    border: none;
 }
 nav.slide-menu-left a {
     display: block;
