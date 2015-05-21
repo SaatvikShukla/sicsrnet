@@ -4,13 +4,9 @@
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-	
-	<!-- FontAwesome -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- bootstrap-material-design -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.css.map">
 	
 	<!-- If you want to use the buttons on the bootstrap -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -44,11 +40,10 @@
 
 
 <body>
-	<span id="main-body">
 		<nav class="nav">
-	                    <span class="nav-toggler toggle-slide-left rippler rippler-circle-mask rippler-bs-primary">
-	                    	<img class="menu_button" src="./index-contents/images/menu.png" height="32" width="39" > 
-	                    </span>
+            <span class="nav-toggler toggle-slide-left rippler rippler-circle-mask rippler-bs-primary">
+            	<img class="menu_button" src="./index-contents/images/menu.png" height="32" width="39" > 
+            </span>
 	    	
 			<span class="rippler rippler-img rippler-bs-success"> 	
 				<p style="float: left;" href="#" class="logo">&nbsp;&nbsp;Saatvik Shukla</p>
@@ -65,8 +60,26 @@
 	            <li><div class="rippler rippler-default"><a href="#">Fifth Menu</a></li></div>
 	        </ul>
 	    </nav><!-- /slide menu left -->
-
+	<span id="main-body">
+	    <paper-shadow z="5">
 			<div id="main"> 
+				<paper-shadow z="3">
+					<div class="credits">
+						<ul>
+							<li>Tim Holman for <a href='https://github.com/tholman/elevator.js'>Elevator.js</a></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>		
+					</div>
+				</paper-shadow>
 				<div class="jumbotron">
 				    <h1>Jumbotron</h1>
 					    <p>
@@ -76,8 +89,9 @@
 							Nulla aliquet tincidunt ex a sagittis. Pellentesque auctor justo justo, ullamcorper tristique velit dapibus elementum. Integer sit amet leo a enim pharetra suscipit. Phasellus dignissim imperdiet mollis. Nunc ac leo cursus arcu consequat ultricies a vitae quam. Fusce eget fringilla ipsum, vitae tempus elit. Donec id massa sed erat sodales eleifend. Sed at nisl sit amet purus varius lobortis sit amet eget magna. Nulla porta magna eu nisl tempor, ut scelerisque orci sollicitudin.
 						</p>
 				</div>
-
 			</div>
+		</paper-shadow>
+		<br><br><br><br><br>
 
 		<paper-shadow z="4">
 			<div class="below-main">
@@ -92,6 +106,8 @@
 				Aliquam erat volutpat. Donec ac arcu at mauris bibendum commodo. Quisque augue massa, imperdiet nec mollis at, consequat eu justo. Curabitur urna odio, tristique sed risus vitae, maximus posuere purus. Praesent egestas magna non lorem varius molestie. Praesent in ullamcorper nisl. Integer facilisis odio velit. Integer ullamcorper gravida lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vestibulum, ipsum nec faucibus congue, massa nibh tincidunt orci, eu accumsan nulla eros vel enim. Praesent ac tempor purus. In tempus porttitor velit, vel scelerisque orci malesuada eu. Sed viverra in mi auctor feugiat. Integer gravida massa id nulla rhoncus gravida.	
 			</div>
 		</paper-shadow>
+	<br><br><br><br><br>
+
 
 
 	<footer>
@@ -99,16 +115,16 @@
 			<center class="rippler rippler-bs-success">
 				<i class="mdi-hardware-keyboard-arrow-up" style="font-size:60px; padding:40px;padding-bottom:20px;"></i>
 			</center>
-		</div>
 
-		<ul class="foot">
-			<li>Contact</li>
-			<li>Aboutt</li>
-			<li>Credits</li>
-			<li>Something else</li>
-			<li>Something other than else</li>
-		</ul>
-		<br><br><br>
+			<ul class="foot">
+				<li>Contact</li>
+				<li>Aboutt</li>
+				<li><a id="credits"> Credits </a></li>
+				<li>Something else</li>
+				<li>Something other than else</li>
+			</ul>
+			<br><br><br>
+		</div>
 	</footer>
 
 	<script>
@@ -190,6 +206,18 @@
 		    duration: 500 // milliseconds
 		  });
 		}
+	</script>
+
+	<script>
+		$('#credits').on('click',function (){
+			$('.jumbotron')
+				.hide();
+			$('.below-main')
+				.hide();
+			$('.credits')
+				.addClass('show')
+				.fadeIn(500);
+		});
 	</script>
 
 </body>
