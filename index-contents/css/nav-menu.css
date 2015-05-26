@@ -66,8 +66,6 @@ nav.menu ul {
     padding: 0;
 }
 nav.menu a {
-    font-weight: 300;
-    color: #fff;
 }
 button.close-menu {
     background-color: #3184a1;
@@ -87,6 +85,11 @@ nav.slide-menu-left li {
     padding: 5px;
     text-align: center;
     border-bottom: solid 1px #3184a1;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    padding: 12px;
+    font-size: 18px;
 }
 nav.slide-menu-left li:first-child {
     border-top: none
@@ -95,9 +98,6 @@ nav.slide-menu-left li:last-child {
     border-bottom: solid 1px #3184a1;    
 }
 nav.slide-menu-left a {
-    display: block;
-    padding: 12px;
-    font-size: 18px;
 }
 nav.slide-menu-left button.close-menu {
     margin: 10px 0;
