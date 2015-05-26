@@ -62,12 +62,24 @@ body {
   margin-top: 110px;
   padding: 100px;
   padding-top: 40px;
+  padding-bottom: 45px;
   height:1000px auto;
   background-color:#eee;
 }
 
 footer {
-  margin-top: 110px;
+  margin-top: 30px;
+}
+
+#foot_arrow {
+  height: 40px;
+  width: 40px;
+}
+
+.foot_arrow-wrapper {
+  padding: 60px;
+  height: auto;
+  vertical-align: center;
 }
 
 .foot {
