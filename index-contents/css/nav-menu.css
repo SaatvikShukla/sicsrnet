@@ -90,6 +90,7 @@ nav.slide-menu-left li {
     display: block;
     padding: 12px;
     font-size: 18px;
+    cursor: pointer;
 }
 nav.slide-menu-left li:first-child {
     border-top: none
@@ -100,8 +101,8 @@ nav.slide-menu-left li:last-child {
 nav.slide-menu-left a {
 }
 nav.slide-menu-left button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
+    margin: 0px 0;
+    padding: 5px 15px;
     background-color: #3184a1;
     color: #fff;
 }
