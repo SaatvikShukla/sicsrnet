@@ -11,9 +11,6 @@
 	<!-- rippler CSS -->
 	<link rel="stylesheet" href="./index-contents/rippler/dist/css/rippler.min.css">
 
-	<!-- rippler js -->
-	<script src="./index-contents/rippler/dist/js/jquery.rippler.min.js"></script>
-
 	<!-- Paper Icon Button-->
 	<link rel="import" href="./index-contents/components/paper-icon-button/paper-icon-button.html">
 	<link rel="import" href="./index-contents/components/core-icons/core-icons.html">
@@ -240,20 +237,20 @@
 	<script>
 		$('#navMenu-credits').on('click',function (){
 			$('.jumbotron')
-				.hide();
+				.slideUp(300)
 			$('.below-main')
-				.hide();
+				.slideUp(300)
 			$('.credits')
 				.removeClass('hide')
-				.slideDown();
+				.fadeIn(500);
 		});
 	</script>
 	<script>
 		$('#navMenu-home').on('click',function (){
 			$('.jumbotron')
-				.slideDown();
+				.fadeIn(300);
 			$('.below-main')
-				.slideDown();
+				.fadeIn(300);
 			$('.credits')
 				.addClass('hide')
 				.fadeOut(500);
