@@ -37,47 +37,73 @@
 
 	<body>
 		<nav class="nav">
-            <span class="nav-toggler toggle-slide-left rippler rippler-circle-mask rippler-bs-primary">
-            	<img class="menu_button" src="./index-contents/images/menu.png" height="32" width="39" > 
-            </span>
-	    	
-			<span class="rippler rippler-img rippler-bs-success"> 	
-				<p style="float: left;" href="#" class="logo">&nbsp;&nbsp;Saatvik Shukla</p>
+            <span class="nav-toggler toggle-slide-left menu_button">
+				<paper-icon-button role="button" icon="menu" relative core-drawer-toggle>
+			      <paper-ripple class="recenteringTouch circle" fit></paper-ripple>
+			    </paper-icon-button>
+			</span>
+    	
+			<span> 	
+				<p style="float: left;" class="logo">&nbsp;&nbsp;Saatvik Shukla</p>
+				<paper-icon-button role="none" relative core-drawer-toggle>
+			      <paper-ripple class="recenteringTouch circle" fit></paper-ripple>
+			    </paper-icon-button>
 			</span>
 		</nav>
-
+		<div id="navMenu-ripple"><paper-ripple fit></paper-ripple></div>
 		<nav class="menu slide-menu-left">
 	        <ul>
+				<div class="menu">
 	            <li><span class="close-menu" style="padding:10px;"><paper-fab icon="arrow-forward" title="arrow-forward"></paper-fab></span></li>
-	            <li class="close-menu"><div id="navMenu-ripple"><paper-ripple fit></paper-ripple> First Menu
-</div></li>
-	            <li class="close-menu">Second Menu</li>
-	            <li class="close-menu">Third Menu</li>
-	            <li class="close-menu">Fourth Menu</li>
-	            <li class="close-menu">Fifth Menu</li>
+	            <li class="close-menu"> 
+	              <div class="item">
+			        <div class="label" fit>Mark as unread</div>
+			        <paper-ripple fit></paper-ripple>
+			      </div>
+				</li>
+	            <li class="close-menu">
+	              <div class="item">
+			        <div class="label" fit>Mark as important</div>
+			        <paper-ripple fit></paper-ripple>
+			      </div>
+	            </li>
+	            <li class="close-menu">
+            	  <div class="item">
+			        <div class="label" fit>Add to Tasks</div>
+			        <paper-ripple fit></paper-ripple>
+		      	  </div>
+	            </li>
+	            <li class="close-menu">
+	              <div class="item">
+			        <div class="label" fit>Create event</div>
+			        <paper-ripple fit></paper-ripple>
+			      </div>
+	            </li>
+				</div>
 	        </ul>
+			    
 	    </nav><!-- /slide menu left -->
-	<span id="main-body">
-	    <paper-shadow z="5">
-			<div id="main"> 
-				<paper-shadow z="3">
-					<div class="credits">
-						<ul>
-							<li>Tim Holman for <a href='https://github.com/tholman/elevator.js'>Elevator.js</a></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>		
-					</div>
-				</paper-shadow>
-
+		<span id="main-body">
+	    	<paper-shadow z="5">
+				<div id="main"> 
+					<paper-shadow z="3">
+						<div class="credits">
+							<ul>
+								<li>Tim Holman for <a href='https://github.com/tholman/elevator.js'>Elevator.js</a></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>		
+						</div>
+			</paper-shadow>
+    
 				<paper-shadow z="4">
 				<div class="jumbotron">
 				    <h1>Jumbotron</h1>
@@ -108,8 +134,11 @@
 
 	<footer>
 		<div class="elevator-button">
-			<center class="rippler rippler-bs-success foot_arrow-wrapper">
-				<img id="foot_arrow" src="./index-contents/images/foot_arrow.png">	
+			<center>
+				<div class="">
+			        <div class="" fit><img id="foot_arrow" src="./index-contents/images/foot_arrow.png">	</div>
+			        <paper-ripple fit style="color: black;"></paper-ripple>
+			    </div>
 			</center>
 
 			<ul class="foot">
