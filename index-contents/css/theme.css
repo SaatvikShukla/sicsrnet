@@ -50,11 +50,31 @@ body {
   width: 41px;
 }
 
-#main {
-  padding: 60px;
-  padding-top: 100px;
-  height:600px auto;
-  background-color:#26A69A;
+@media screen and (max-width:480px){
+  #main {
+    padding: 30px;
+    padding-top: 50px;
+    height:600px auto;
+    background-color:#26A69A;
+  }
+}
+
+@media screen and (min-width:481px){
+  #main {
+    padding: 60px;
+    padding-top: 100px;
+    height:600px auto;
+    background-color:#26A69A;
+  }
+}
+
+@media screen and (max-width:480px){
+  #main {
+    padding: 60px;
+    padding-top: 100px;
+    height:600px auto;
+    background-color:#26A69A;
+  }
 }
 
 .below-main {
