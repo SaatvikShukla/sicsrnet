@@ -68,15 +68,6 @@ body {
   }
 }
 
-@media screen and (max-width:480px){
-  #main {
-    padding: 60px;
-    padding-top: 100px;
-    height:600px auto;
-    background-color:#26A69A;
-  }
-}
-
 .below-main {
   margin-top: 110px;
   padding: 100px;
