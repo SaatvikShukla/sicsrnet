@@ -21,10 +21,22 @@ body {
     transition: all 0.5s ease;
 }
 
+@media screen and (max-width:480px){
 .logo {
   float: left;
   color: black;
   padding-top: 4.25px;
+  font-size : 12px;
+  }
+}
+
+@media screen and (min-width:481px){
+.logo {
+  float: left;
+  color: black;
+  padding-top: 4.25px;
+  font-size : 18px
+  }
 }
 
 .menu_button {
