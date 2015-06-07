@@ -21,6 +21,15 @@ body {
     transition: all 0.5s ease;
 }
 
+@media screen and (max-width:250px){
+.logo {
+  float: left;
+  color: black;
+  padding-top: 4.25px;
+  font-size : 21px;
+  }
+}
+
 @media screen and (max-width:480px){
 .logo {
   float: left;
